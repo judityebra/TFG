@@ -1,38 +1,44 @@
-# TFG - Brain connectivity alterations in Multiple Sclerosis
+# TFG - Brain Connectivity Alterations in Multiple Sclerosis
 
-Aquest repositori conté el treball de fi de grau sobre l'estudi de la connectivitat cerebral en pacients amb Esclerosi Múltiple (EM) mitjançant teoria de grafs i aprenentatge automàtic.
+This repository contains the final degree project focused on studying brain connectivity alterations in patients with Multiple Sclerosis (MS) using graph theory and machine learning.
 
-## Descripció
+## Overview
 
-S'han analitzat dades de ressonància magnètica (FA, GM i RS) de 270 participants per modelar xarxes neuronals i investigar diferències de connectivitat entre grups clínics. A continuació, s'han aplicat models de classificació basats en:
+The project analyzes MRI-derived data (FA, GM, and RS) from 270 participants to model brain networks and investigate connectivity differences between groups. The workflow includes:
 
-- SVM
-- Logistic Regression
-- Graph Neural Networks (GCN)
+- Network construction using graph-based representations
+- Descriptive statistical analysis
+- Feature extraction and embedding generation
+- Classification using traditional machine learning models
+- Graph Neural Network (GNN) experimentation
 
-L'objectiu principal és detectar patrons de connectivitat alterats associats a la malaltia i avaluar la capacitat predictiva dels models.
+## Objectives
 
-## Estructura del repositori
+The main goal is to evaluate whether brain network patterns can help distinguish between clinical groups and whether graph-based models provide added value over conventional methods.
 
-- `GNNs.ipynb` — experimentació amb xarxes neuronals de grafs
-- `grafs.ipynb` — construcció i anàlisi de grafs de connectivitat
-- `embedding.ipynb` — processament i representacions d'embedding
-- `models.ipynb` — entrenament i comparació de models de classificació
-- `anàlisi_descriptiu.ipynb` — anàlisi descriptiva de les dades
-- `csvs.zip` — fitxers CSV preparats per a l'execució del projecte
-- `TFG.pdf` / `TFG_Judit.pdf` / `TFG_PPT_Judit.pdf` — documentació i presentació del treball
+## Repository structure
 
-## Dades
+- `GNNs.ipynb` — experiments with graph neural networks
+- `grafs.ipynb` — graph construction and connectivity analysis
+- `embedding.ipynb` — embedding generation and representation learning
+- `models.ipynb` — training and comparison of classification models
+- `anàlisi_descriptiu.ipynb` — descriptive analysis of the dataset
+- `csvs.zip` — preprocessed CSV files used in the project
+- `TFG.pdf` — final project report
+- `TFG_Judit.pdf` — version of the report with author details
+- `TFG_PPT_Judit.pdf` — presentation slides
 
-Les dades preparades per a l'execució del projecte es troben incloses dins de `csvs.zip`.
+## Dataset
 
-Si necessites la versió original o la base de dades completa, hi ha un enllaç compartit al Drive:
+The project includes a prepared dataset compressed in `csvs.zip` so the analysis can be reproduced without additional setup.
+
+A shared Drive folder with the original data is available here:
 
 https://drive.google.com/file/d/1RHwVcF5J04S-Ay6FRFc3Ze68XKkvrDVc/view?usp=sharing
 
-## Requisits
+## Environment and dependencies
 
-Es recomana un entorn Python 3.9+ amb les següents dependències:
+A Python 3.9+ environment is recommended. The main dependencies include:
 
 - pandas
 - numpy
@@ -41,26 +47,25 @@ Es recomana un entorn Python 3.9+ amb les següents dependències:
 - matplotlib
 - seaborn
 - jupyter
-- torch / torch-geometric (si es vol executar la part de GNN)
+- torch and torch-geometric (for the GNN experiments)
 
-## Execució
+## How to run the project
 
-1. Clona el repositori.
-2. Descomprimeix `csvs.zip` si cal.
-3. Obre els notebooks amb Jupyter Notebook o JupyterLab.
-4. Executa les cel·les en ordre per reproduir el pipeline d'anàlisi i modelatge.
+1. Clone the repository.
+2. Unzip `csvs.zip` if needed.
+3. Open the notebooks using Jupyter Notebook or JupyterLab.
+4. Run the cells in order to reproduce the analysis and model training pipeline.
 
 ## Notes
 
-- La carpeta `csvs` és la que es genera en executar el codi i conté les dades preprocessades per als experiments.
-- El projecte està desenvolupat majoritàriament en Jupyter Notebook.
+- The `csvs` folder contains the processed data generated during the project workflow.
+- Most of the analysis is implemented in Jupyter notebooks.
+- The repository is intended for academic and research use.
 
-## Autoria
+## Authors
 
-Treball de fi de grau de Judit.
+Final Degree Project by Judit.
 
----
+## Abstract
 
-English summary:
-
-This repository contains a final-degree project focused on brain connectivity alterations in Multiple Sclerosis patients using graph theory and machine learning. MRI-derived features were modeled as brain networks, and several classifiers were evaluated, including SVM, Logistic Regression, and Graph Neural Networks.
+This project investigates brain connectivity alterations in Multiple Sclerosis patients through graph theory and machine learning. MRI data from 270 participants were used to build brain networks, and several classification models were evaluated, including SVM, Logistic Regression, and Graph Neural Networks (GCN).
